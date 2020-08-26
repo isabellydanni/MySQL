@@ -1,0 +1,33 @@
+use db_diversos;
+	Create table tb_varejo(
+
+	id bigint auto_increment,
+	nome varchar (20) not null,
+	preco int (5) not null,
+	categoria varchar (20),
+	cod int (5) not null,
+	eletrodomestico boolean,
+	peso int (2) not null,
+
+	primary key (id)
+);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("armário",2000,"quarto",23244,false,20);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("geladeira",3000,"cozinha",44532,true,30);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("micro-ondas",600,"cozinha",11332,true,10);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("estante",1000,"sala",55431,false,25);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("sofá",2500,"sala",22314,false,70);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("mesa",2000,"sala",14432,false,15);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("maquina de lavar",1500,"lavanderia",33114,true,40);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("forno",600,"cozinha",42221,true,7);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("cama",2000,"quarto",34213,false,20);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("gabinete",300,"cozinha",32121,false,15);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("hack",400,"sala",12334,false,20);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("Tv",2000,"sala",41344,true,10);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("secadora",2000,"lavanderia",41324,true,20);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("aquecedor",80,"quarto",54321,true,1);
+	insert into tb_varejo (nome, preco, categoria, cod, eletrodomestico, peso) values("ventilador",200,"quarto",12345,true,3);
+
+	select * from tb_varejo where nome like "a%",
+	select * from tb_varejo where categoria like "%sala%",
+	select nome, preco from tb_varejo where categoria = "sala" and preco between 1000 and 1500;
+	select * from tb_varejo where categoria like "c%";

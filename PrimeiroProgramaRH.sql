@@ -1,6 +1,4 @@
-create database db_estoque
-use db_estoque;
-create table tb_RH(
+
 	id bigint auto_increment,
     	nome varchar (50) not null,
     	idade int (2) not null,

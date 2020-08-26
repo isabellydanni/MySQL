@@ -1,0 +1,39 @@
+	create database db_diversos
+
+		use db_diversos;
+
+	create table tb_escola(
+	
+	id bigint auto_increment,
+	nome varchar (50) not null,
+	escola varchar(50),
+	UF varchar (2) not null,
+	idade int (2) not null,
+	turma int (3) not null,
+	turno int (2) not null,
+	RA int (5) not null,
+	
+	primary key (id)
+)
+	
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("João","ETEC Lauro Gomes","SP",30,123,1,12345);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Maria","Maristela","RJ",18,876,3,54321);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Jeferson","Francisco Cristiano","RS",19,456,2,23414);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Pedro","Maristela","SP",25,980,3,14234);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Matheus",""ETEC Lauro Gomes","RS",14,123,2,51142);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Lívia","Maristela","SP",27,456,1,3,23114);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Bianca","Francisco Cristiano","RJ",23,456,1,42132);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Luana","Diplomata Sérgio","RS",23,123,2,21441);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Vinicius","Diplomata Sérgio""RJ",18,876,3,14235);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Joana","ETEC Lauro Gomes","RS",17,456,2,52314);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Thaina","Francisco Cristiano","RS",25,123,3,22415);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Flávio","Maristela","SP",20,876,1,51442);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Eduardo","Diplomata Sérgio","RJ",17,980,1,54442);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Bárbara","ETEC Lauro Gomes","SP",22,456,1,51112);
+	insert into tb_escola(nome,escola,UF,idade,turma,turno,RA) values ("Nicoly","Francisco Cristiano","SP",14,123,3,44523);
+
+	select * from tb_RH where idade >18,
+	select * from tb_RH where idade <18,
+	select * from tb_RH where idade between >20 and <25,
+
+

@@ -1,0 +1,32 @@
+		use db_diversos;
+	Create table tb_ petshop(
+
+	id bigint auto_increment,
+	nome varchar (20) not null,
+	idade int (2) not null,
+	porte varchar (20),
+	peso int (3) not null,
+	raça varchar (20), --VL= vira lata--
+	sexo int (1), --1 para macho e 2 para femea--
+
+	primary key (id)
+)
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Pipoca",4,"pequeno",9,"shih-tzu",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Juninho",9,"grande",25,"labrador",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Guenza",7,"médio",14,"galdo ingles",2);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Bolinha",14"pequeno",7,"maltês",2);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Batman",1,"médio",15,"husky",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Mia",7,"médio",18,"golden",2);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Bolt",5,"grande",34,"pastor alemão",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Madeline",3"pequeno",5,"buldogue",2);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Leão",12,"grande",44,"pitbull",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Fred",2,"médio",12,"poodle",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Beto",8"pequeno",7,"yorkshire",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Negão",10"pequeno",7,"VL",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Judity",4,"grande",33,"dalmata",2);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Jhonny",7"pequeno",9,"pincher",1);
+	insert into tb_petshop (nome, idade, porte, peso, raça, sexo) values("Léo",11,"médio",16,"VL",1);
+
+	select * from tb_RH where peso >10,
+	select * from tb_RH where peso <10,
+	select * from tb_RH where peso between >10 and <30
