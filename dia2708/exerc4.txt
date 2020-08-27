@@ -1,0 +1,58 @@
+	create database db_cidade_das_carnes;
+		use db_cidade_das_carnes
+
+	create table tb_categoria (
+
+    	id bigint auto_increment,
+    	tipo varchar(20) not null,
+    	quantidade_kg varchar(5) not null,
+   	fornecedor varchar(50) not null,
+
+    	primary key (id)
+);
+
+	insert into tb_categoria(tipo, quantidade_kg, fornecedor) values ("Suíno", "600kg", "JBS");
+	insert into tb_categoria(tipo, quantidade_kg, fornecedor) values ("Ovinos", "500kg", "Minuano");
+	insert into tb_categoria(tipo, quantidade_kg, fornecedor) values ("Aves", "1200kg", "BRF");
+	insert into tb_categoria(tipo, quantidade_kg, fornecedor) values ("Bovino", "1000kg", "Agra Industrial");
+	insert into tb_categoria(tipo, quantidade_kg, fornecedor) values ("Caprino", "300kg", "Marfrig");
+
+
+	create table tb_produto(
+
+    	id bigint auto_increment,
+    	nome varchar(30) not null,
+    	quantidade bigint not null,
+    	preco_kg decimal(10,2),
+    	disponibilidade boolean,
+    	id_categoria bigint,
+
+    	primary key (id),
+    	foreign key (id_categoria) references tb_categoria(id)
+);
+
+	insert into tb_produto(nome, quantidade, preco_kg, disponibilidade, id_categoria) values ("Carne de cabrito", 2, 60.00, false, 2 );
+	insert into tb_produto(nome, quantidade, preco_kg, disponibilidade, id_categoria) values ("Carne de boi", 4, 90.00, true, 1 );
+	insert into tb_produto(nome, quantidade, preco_kg, disponibilidade, id_categoria) values ("Frango", 1, 13.00, true, 4 );
+	insert into tb_produto(nome, quantidade, preco_kg, disponibilidade, id_categoria) values ("Carne de vaca", 2, 100.00, false, 1 );
+	insert into tb_produto(nome, quantidade, preco_kg, disponibilidade, id_categoria) values ("Carne de porco", 2, 20.00, false, 3 );
+	insert into tb_produto(nome, quantidade, preco_kg, disponibilidade, id_categoria) values ("Carne de ovelha", 2, 50.00, true,  5);
+	insert into tb_produto(nome, quantidade, preco_kg, disponibilidade, id_categoria) values ("Frango", 3, 80.00, true, 4 );
+	insert into tb_produto(nome, quantidade, preco_kg, disponibilidade, id_categoria) values ("Carne de cabrito", 4, 400.00, false, 2 );
+
+
+	select * from tb_produto where preco_kg > 50;
+
+	select * from tb_produto where preco_kg between 3 and 60;
+
+	select * from tb_produto where nome like "%c%";
+
+	select * from tb_produto
+	inner join tb_categoria on tb_categoria.id = tb_produto.id_categoria;
+
+	select tb_produto.nome, tb_categoria.tipo from tb_produto
+	inner join tb_categoria on tb_categoria.id = tb_produto.id_categoria
+	where tipo = "Bovino";
+
+
+
