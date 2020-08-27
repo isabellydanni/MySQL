@@ -34,6 +34,6 @@
 
 	select * from tb_RH where idade >18,
 	select * from tb_RH where idade <18,
-	select * from tb_RH where idade between >20 and <25,
+	select * from tb_RH where idade between 20 and 25,
 
 
