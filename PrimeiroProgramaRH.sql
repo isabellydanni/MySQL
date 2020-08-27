@@ -1,4 +1,6 @@
-
+create database db_estoque
+use db_estoque;
+create table tb_RH(
 	id bigint auto_increment,
     	nome varchar (50) not null,
     	idade int (2) not null,
@@ -24,6 +26,9 @@ insert into tb_RH (nome, idade, cargo, salario, graduacao) values ("Jeferson",32
 insert into tb_RH (nome, idade, cargo, salario, graduacao) values ("Débora",16,"jovem aprendiz",600,null);
 insert into tb_RH (nome, idade, cargo, salario, graduacao) values ("Bárbara",30,"dentista",5500,"odontologia");
 insert into tb_RH (nome, idade, cargo, salario, graduacao) values ("Renan",20,"auxiliar administrativo",500,"administrativo");
+
+
+select * from db_estotb_rh;
 select * from tb_RH where salario >2000;
 select * from tb_RH where salario >2000;
 delete from tb_RH where id = 1;
